@@ -15,7 +15,7 @@
 
 # ---------------------------- Criar o menu da aplicação  ----------------------------
 def menu():
-    print('Menu')
+    print('\n Menu')
     print('1) Criar lista')
     print('2) Ler lista')
     print('3) Soma')
