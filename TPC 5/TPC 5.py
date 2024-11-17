@@ -18,6 +18,7 @@
 # ---------------------------- Criar o menu da aplicação ----------------------------
 
 def menu():
+    print('Menu')
     print('1) Lista de filmes em exibição')
     print('2) Disponibilidade de um lugar específico na sala') # Tem de dar um boleano como resultado da função
     print('3) Bilhete vendido')
@@ -30,6 +31,7 @@ def menu():
 
 # Opção 6 --> Inserir nova sala, garantindo que não haja duplicação de salas
 def Inserir_sala(cinema, sala):
+    
     for s in cinema:
         if s[2] == sala[2]:  # Verifica se o filme já está associado a outra sala
             print(f'A sala com o filme "{sala[2]}" já existe.')
@@ -40,6 +42,7 @@ def Inserir_sala(cinema, sala):
 
 # Opção 1 --> Listar Filmes em exibição
 def Listar(cinema):
+    
     print('-----------------')
     print('Filmes')
     print('-----------------')
@@ -49,6 +52,7 @@ def Listar(cinema):
 
 # Opção 3 --> Registar venda de bilhetes
 def Bilhete_vendido(cinema, filme, lugar):
+    
     for sala in cinema:
         if sala[2] == filme:
             if lugar not in sala[1] and lugar <= sala[0]:
@@ -62,6 +66,7 @@ def Bilhete_vendido(cinema, filme, lugar):
 
 # Opção 2 --> Verificar disponibilidade de um lugar
 def Lugar_disponibilidade(cinema, filme, lugar):
+    
     for sala in cinema:
         if sala[2] == filme:
             if lugar in sala[1]:
@@ -78,6 +83,7 @@ def Lugar_disponibilidade(cinema, filme, lugar):
 
 # Opção 4 --> Listar lugares disponíveis em cada sala
 def Listar_disponibilidade(cinema):
+    
     print('Lugares disponíveis')
     print('Filmes ------- Lugares')
     for sala in cinema:
@@ -87,6 +93,7 @@ def Listar_disponibilidade(cinema):
 
 # Opção 5 --> Procurar um filme em exibição no cinema
 def Procura(cinema, filme):
+    
     res = -1
     i = 0
     for i, sala in enumerate(cinema): # i corresponde ao índice de cada sala dentro do cinema
@@ -105,10 +112,11 @@ cinema = [
     [200, [], 'Interstellar']
 ]
 
-menu()
-opção = int(input('Selecione a opção desejada: '))
 
+opção = -1
 while opção != 0:
+    menu()
+    opção = int(input('Selecione a opção desejada: '))
     if opção == 1:
         Listar(cinema)
     elif opção == 2:
@@ -129,5 +137,4 @@ while opção != 0:
         filme = input('Nome do novo filme a exibir: ')
         nova_sala = [num_lugares, [], filme]
         cinema = Inserir_sala(cinema, nova_sala)
-    opção = int(input('Selecione a opção desejada: '))
 print('Até à próxima!')
