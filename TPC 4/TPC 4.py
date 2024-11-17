@@ -140,11 +140,12 @@ def Procura(lista):
 
 # ---------------------------- Programa Principal ----------------------------
 
-menu()
-opção = int(input('Selecione a opção desejada:'))
+opção = -1
 
 while opção != 0:
-
+    menu()
+    opção = int(input('Selecione a opção desejada:'))
+    
     if opção == 1:
         v_interna = Cria_lista()
     elif opção == 2:
@@ -167,6 +168,5 @@ while opção != 0:
             print('O elemento que procura não se encontra na lista')
         else:
             print(f'O elemento que procura encontra-se na posição: {posição}')
-    opção = int(input('Selecione a opção desejada:'))
 print(v_interna)
 print('Obrigado! Até à próxima!')
