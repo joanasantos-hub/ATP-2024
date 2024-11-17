@@ -89,11 +89,10 @@ def Consulta(turma, id):
 # Opção 5
 def Guardar_turma(turma, fnome):
     
-    with open(fnome, "w") as file:
-        for nome, id, notas in turma:
-            # Formata o aluno como "nome,id::nota1,nota2,nota3"
+    with open(fnome, 'w') as file:
+        for nome, id, notas in turma: # Aluno fica formatado como 'nome,id::nota1,nota2,nota3'
             notas_str = ",".join(map(str, notas))
-            linha = f"{nome},{id}::{notas_str}\n"
+            linha = f'{nome},{id}::{notas_str}\n'
             file.write(linha)
     print(f'Turma guardada em {fnome}')
 
@@ -101,14 +100,14 @@ def Guardar_turma(turma, fnome):
 def Carregar_turma(fnome):
 
     turma = []
-    file = open(fnome,"r")
+    file = open(fnome,'r')
     for linha in file:
         if linha != '': # Identifica linhas com texto
             dados = linha.split('::') # Dividimos as linhas do ficheiro nos dados do tuplo
-            nome_id = dados[0].split(",")
+            nome_id = dados[0].split(',')
             nome = nome_id[0]
             id = int(nome_id[1])
-            notas = list(map(int, dados[1].split(",")))
+            notas = list(map(int, dados[1].split(',')))
             aluno = (nome, id, notas)
             turma.append(aluno)
     return turma
