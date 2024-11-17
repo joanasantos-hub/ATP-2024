@@ -1,8 +1,8 @@
-# TPC 7 -> Aplicação de Gestão de Registos Metereológicos
+# TPC 7 -> Aplicação de Gestão de Registos Meteorológicos
 
 # Estrutura dos dados
 
-# Tabela Meteriológica -> [(Data, Temp Mínima, Temp Máxima, Precipitação)]
+# Tabela Meteorológica -> [(Data, Temp Mínima, Temp Máxima, Precipitação)]
 # Data -> (inteiro, inteiro, inteiro)
 # Temp Mínima -> float
 # Temp Máxima -> float
@@ -12,14 +12,14 @@
 def menu():
     print('\n Menu')
     print('1) Média das temperaturas')
-    print('2) Guardar tabela meteriológica')
-    print('3) Carregar tabela meteriológica')
+    print('2) Guardar tabela meteorológica')
+    print('3) Carregar tabela meteorológica')
     print('4) Temperatura mínima mais baixa')
     print('5) Amplitude máxima')
     print('6) Dia com maior precipitação')
     print('7) Dias com precipitação superior a um limite')
     print('8) Maior período de calor')
-    print('9) Mostrar gráfico metereológico')
+    print('9) Mostrar gráfico meteorológico')
     print('0) Sair')
 
 # ---------------------------- Funções da aplicação ----------------------------
@@ -38,8 +38,8 @@ def Média_temp(tab_meteo):
 def Guardar_tabela(tabela, fnome):
 
     file = open(fnome,'w')
-    for previsao in tabela:
-        data, min,max, prec = previsao
+    for previsão in tabela:
+        data, min,max, prec = previsão
         file.write(str(data)+ '|' +  str(min) + '|' + str(max)+ '|' + str(prec))
         file.write('\n')
     file.close()
@@ -170,7 +170,7 @@ while opção != 0:
     elif opção == 2:
         print(Guardar_tabela(tab_meteo1, 'meteorologia.txt'))
     elif opção == 3:
-        print(Carregar_tabela('metereologia.txt'))
+        print(Carregar_tabela('meteorologia.txt'))
     elif opção == 4:
         print(Min_temp(tab_meteo1))
     elif opção == 5:
