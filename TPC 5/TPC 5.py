@@ -18,7 +18,7 @@
 # ---------------------------- Criar o menu da aplicação ----------------------------
 
 def menu():
-    print('Menu')
+    print('\n Menu')
     print('1) Lista de filmes em exibição')
     print('2) Disponibilidade de um lugar específico na sala') # Tem de dar um boleano como resultado da função
     print('3) Bilhete vendido')
