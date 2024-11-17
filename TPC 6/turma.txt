@@ -1,0 +1,5 @@
+João Silva,111::14,15,14
+Mariana Gomes,112::17,18,17
+Ricardo Lopes,113::14,15,15
+Jorge Mendes,114::18,19,17
+Rodrigo Araújo,115::20,19,18
