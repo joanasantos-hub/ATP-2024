@@ -1,6 +1,6 @@
 # TPC 4 -> Aplicação de Manipulação de Listas de Inteiros
 
-# A aplicação terá uma variável interna para guardar uma lista de números;
+# A aplicação terá uma variável interna para guardar uma lista de números:
     # Na opção 1, deverá ser criada uma lista de números aleatórios entre 1 e 100 que será guardada na variável interna;
     # Na opção 2, deverá ser criada uma lista com números introduzidos pelo utilizador, que será guardada na variável interna;
     # Nestas primeiras opções, se a variável interna já tiver uma lista, esta será sobreposta/apagada pela nova lista;
