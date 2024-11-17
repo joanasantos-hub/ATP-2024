@@ -27,7 +27,7 @@ def menu():
     print('3) Lista de alunos registados na turma')
     print('4) Consultar aluno por id')
     print('5) Guardar turma num ficheiro')
-    print('6) Carregar turma para um ficheiro')
+    print('6) Carregar turma dum ficheiro')
     print('0) Sair')
 
 # ---------------------------- Funções da aplicação ----------------------------
