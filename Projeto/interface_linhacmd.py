@@ -376,9 +376,9 @@ def Importar_Pub(fnome):
                 registos.get('url') in url_existe
             ): # Os registos válidos no ficheiro externo serão adicionados à bd
                 mensagens_duplicadas.append(f'Publicação duplicada "{registos.get('title')}" não foi importada!')
-                continue
-
-            bd.append(registos)
+            
+            else:
+                bd.append(registos)
 
         with open('ata_medica_papers.json', 'w', encoding='utf-8') as f2: #Abrimos o ficheiro principal para escrita e implementamos a nova bd atualizada com os novos registos
             json.dump(bd, f2, ensure_ascii=False, indent=4)
