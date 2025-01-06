@@ -362,10 +362,10 @@ def Importar_Pub(fnome):
         with open('ata_medica_papers.json', 'r', encoding='utf-8') as f2: # Lemos o ficheiro principal com a nossa bd
             bd = json.load(f2)
 
-        title_existe = {pub.get('title') for pub in bd if pub.get('title')}
-        pdf_existe = {pub.get('pdf') for pub in bd if pub.get('pdf')}
-        doi_existe = {pub.get('doi') for pub in bd if pub.get('doi')}
-        url_existe = {pub.get('url') for pub in bd if pub.get('url')}
+        title_existe = {pub.get('title') for pub in bd if pub.get('title')} # Set em compreensão -> Os sets apenas armazenam elementos únicos (sem duplicados)
+        pdf_existe = {pub.get('pdf') for pub in bd if pub.get('pdf')} # Set em compreensão -> Os sets apenas armazenam elementos únicos (sem duplicados)
+        doi_existe = {pub.get('doi') for pub in bd if pub.get('doi')} # Set em compreensão -> Os sets apenas armazenam elementos únicos (sem duplicados)
+        url_existe = {pub.get('url') for pub in bd if pub.get('url')} # Set em compreensão -> Os sets apenas armazenam elementos únicos (sem duplicados)
 
         mensagens_duplicadas = []
 
